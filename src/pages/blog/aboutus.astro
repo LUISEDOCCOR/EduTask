@@ -1,0 +1,150 @@
+---
+import LayoutBlog from "../../layouts/LayoutBlog.astro";
+import Section from "../../components/blog/section.astro";
+import List from "../../components/blog/List.astro";
+
+const createTasks = [
+    {
+        label: "Interfaz Intuitiva",
+        content: "Fácil de usar y navegar."
+    },
+    {
+        label: "Organización Eficiente",
+        content: "Categoriza y prioriza tus tareas según su importancia y fecha de entrega."
+    },
+    {
+        label: "Acceso Rápido",
+        content: "Encuentra tus tareas rápidamente con nuestra función de búsqueda avanzada."
+    },
+]
+const setReminders = [
+    {
+        label: "Recordatorios Personalizables",
+        content: "Ajusta los recordatorios según tus necesidades."
+    },
+    {
+        label: "Cumple tus Plazos",
+        content: "Mantén el control de todas tus entregas importantes."
+    }
+]
+const groups = [
+    {
+        label: "Colaboración Eficiente",
+        content: "Trabaja con tus compañeros de clase en proyectos grupales."
+    },
+    {
+        label: "Comunicación Simplificada",
+        content: "Comparte actualizaciones y mantente en contacto con tus grupos."
+    },
+    {
+        label: "Metas Compartidas",
+        content: "Alcanza tus objetivos académicos con el apoyo de tu equipo."
+    }
+]
+const otherFeatures = [
+    {
+        label: "Panel de Control Personalizado",
+        content: "Visualiza todas tus tareas y recordatorios de un vistazo."
+    },
+    {
+        label: "Sincronización Multidispositivo",
+        content: "Accede a tus tareas desde cualquier lugar, en cualquier dispositivo."
+    },
+    {
+        label: "Análisis de Productividad",
+        content: "Revisa tu progreso y encuentra maneras de mejorar tu eficiencia."
+    }
+]
+const whyChoose = [
+    {
+        label: "Facilidad de Uso",
+        content: "Diseñado pensando en estudiantes, fácil de aprender y utilizar"
+    },
+    {
+        label: "Soporte Continuo",
+        content: "Estamos aquí para ayudarte con cualquier problema o duda que tengas."
+    },
+    {
+        label: "Innovación Constante",
+        content: "Continuamente mejoramos y añadimos nuevas funcionalidades para ofrecerte la mejor experiencia posible."
+    }
+]
+---
+<LayoutBlog title="Sobre Nosotros">
+    <article class="mt-12 space-y-8">
+        <p class="leading-snug">
+            En la ajetreada vida de un estudiante, es 
+            común olvidar tareas o no anotarlas adecuadamente, 
+            lo que puede llevar a un estrés innecesario y afectar 
+            el rendimiento académico. Aquí es donde <strong>Edutask</strong> 
+            entra en juego. Nuestra plataforma está diseñada 
+            específicamente para estudiantes que buscan una 
+            solución eficaz para gestionar sus tareas y recordatorios, 
+            optimizando su productividad y mejorando su organización.
+        </p>
+        <h2 class="text-md text-cGrey">Características Clave de Edutask</h2>
+        <Section subtitle="Optimiza tu Productividad">
+            <p>
+                <strong>Edutask</strong> ofrece una serie de 
+                funciones poderosas para 
+                ayudarte a mantenerte organizado 
+                y enfocado. Nuestra aplicación es tu 
+                asistente personal que se asegura de 
+                que no pierdas de vista tus 
+                responsabilidades académicas.
+            </p>
+            <img class="mx-auto rounded-sm" src="/preview.webp" alt="preview">
+        </Section>
+        <Section subtitle="Crear Tareas">
+            <p class="pb-4">
+                Con <strong>Edutask</strong>, 
+                puedes crear y organizar tus tareas de manera eficiente. 
+                Nuestra interfaz intuitiva te permite anotar todas tus 
+                responsabilidades académicas en un solo lugar. Olvídate 
+                del caos y la confusión; con <strong>Edutask</strong>, todo está bajo control.
+            </p>
+            <List items={createTasks}/>
+        </Section>
+        <Section subtitle="Establecer Recordatorios">
+            <p class="pb-4">
+                Nunca olvides una tarea importante 
+                con nuestro sistema de recordatorios 
+                integrado. Programa alertas para cada 
+                una de tus tareas y asegúrate de cumplir 
+                con tus plazos sin estrés.
+            </p>
+            <List items={setReminders}/>
+        </Section>
+        <Section subtitle="Grupos">
+            <p class="pb-4">
+                ¡No te enfrentes a tus responsabilidades solo! 
+                Crea y únete a grupos de tareas donde la colaboración 
+                y la eficiencia son la clave del éxito. Juntos, 
+                alcanzarás tus metas más rápido y con más diversión.
+            </p>
+            <List items={groups}/>
+        </Section>
+        <Section subtitle="Ventajas Adicionales">
+            <p class="pb-4">
+                <strong>Edutask</strong> no solo es una herramienta de 
+                gestión de tareas, sino también una 
+                plataforma que apoya tu crecimiento académico 
+                y personal
+            </p>
+            <List items={otherFeatures}/>
+        </Section>
+        <h2 class="text-md text-cGrey">¿Por Qué Elegir Edutask?</h2>
+        <p class="leading-snug">
+            <strong>Edutask</strong> es más que una simple aplicación de tareas; es tu 
+            compañero en el viaje académico. Nuestra misión es 
+            ayudarte a alcanzar tus objetivos académicos de manera 
+            más organizada y menos estresante. Con <strong>Edutask</strong>, 
+            tienes todas las herramientas que necesitas para ser exitoso.
+        </p>
+        <List items={whyChoose}/>
+        <p class="leading-snug">
+            ¡Empieza hoy mismo con <strong>Edutask</strong> y transforma tu manera de gestionar tus tareas académicas! 
+            La organización y el éxito están a solo un clic de distancia.
+        </p>
+    </article>
+</LayoutBlog>

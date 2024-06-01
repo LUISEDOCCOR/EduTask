@@ -57,7 +57,7 @@ export const Nav = () => {
                     }
                 </section>
 
-                <section className="xl:hidden">
+                <section className="animate-pulse xl:hidden">
                     <button 
                         onClick={() => {setCliked(!isCliked)}} 
                         className={`transition-transform ${isCliked ? "rotate-180" : "rotate-0"}`}

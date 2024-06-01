@@ -83,11 +83,11 @@ export const Nav = () => {
 
             </nav>
             <section id="mobile-nav" className={`h-screen w-screen pt-40 px-12 flex-col gap-8
-            bg-black/25 backdrop-blur-lg absolute bottom-0 xl:hidden delay-200 ${isCliked ? "flex slide-down" : "hidden"}`}>
+            bg-black/50 backdrop-blur-lg absolute bottom-0 xl:hidden delay-200 ${isCliked ? "flex slide-down" : "hidden"}`}>
                 {
                     links.map(({ href, label }) => (
                         <a
-                            className="item-nav-mobile text-2xl font-semibold xl:hover:opacity-70 transition-opacity"
+                            className="item-nav-mobile text-2xl xl:hover:opacity-70 transition-opacity"
                             href={href}
                         >{label}
                         </a>

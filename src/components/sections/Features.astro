@@ -1,0 +1,58 @@
+---
+const features = [
+	{
+		label: "Crear Tareas",
+		content: `Nuestra aplicación de 
+		tareas ofrece una serie de 
+		funciones poderosas para a
+		yudarte a mantenerte organizado y 
+		enfocado.`
+	},
+	{
+		label: "Establecer Recordatorios",
+		content: `Nunca olvides una tarea importante con nuestro sistema 
+		de recordatorios integrado.`
+	},
+	{
+		label: "Grupos",
+		content: `¡No te enfrentes a tus 
+		responsabilidades solo! Crea y únete a 
+		grupos de tareas donde la colaboración y
+		la eficiencia son la clave del éxito. 
+		Juntos, alcanzarás tus metas más rápido 
+		y con más diversión.`
+	},
+]
+---
+<section id="features" class="min-h-[50vh] flex flex-col items-center gap-16">
+    <article class="flex justify-center items-center flex-col gap-4">
+        <h5 class="text-sm">Características Clave</h5>
+        <h3 class="text-4xl font-bold">Optimiza tu productividad</h3>
+        <p 
+            class="text-cGrey text-lg"
+        >
+            Nuestra aplicación de tareas ofrece 
+            una serie de funciones poderosas para 
+            yudarte a mantenerte organizado y enfocado.
+        </p>
+    </article>
+    <article class="flex justify-center items-center gap-12 w-[50vw]">
+        <section>
+            <img 
+                src="./calendar.svg" 
+                alt="image key features"
+                class="w-96 h-auto"
+            >
+        </section>
+        <section class="w-1/3 space-y-5">
+            {
+                features.map(({label, content}) => (
+                    <div class="space-y-1">
+                        <h5 class="text-lg font-semibold">{label}</h5>
+                        <p class="text-sm">{content}</p>
+                    </div>
+                ))
+            }
+        </section>
+    </article>
+</section>

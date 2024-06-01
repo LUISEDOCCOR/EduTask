@@ -1,0 +1,24 @@
+---
+import Button from "../Button.astro"
+---
+<section id="launch" class="min-h-[50vh] flex justify-center flex-col items-center gap-4">
+    <h3 class="text-4xl font-bold">Experimenta la aplicación de tareas definitiva</h3>
+    <p class="text-cGrey text-lg"
+    >
+        Optimiza tus tareas diarias y aumenta tu productividad 
+        con nuestra aplicación de tareas intuitiva y llena de funciones.
+    </p>
+    <form method="POST" action="https://formspree.io/f/xwkgdlen" class="flex gap-2">
+        <input 
+            aria-label="Email" 
+            placeholder="Correo" 
+            class="w-96 bg-cBlack border-[1px] px-2 border-cWhite rounded-lg outline-none" 
+            type="email"
+            required
+            name="email"
+        >
+        <div class="w-36"><Button label='Unirme' isPrimary={true}/></div>
+    </form>
+    <h5 class="text-sm">Suscríbete para recibir una notificación cuando lancemos.</h5>
+
+</section>

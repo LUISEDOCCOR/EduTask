@@ -1,0 +1,20 @@
+---
+interface Props {
+    label: string
+    isPrimary: boolean    
+}
+
+const { label, isPrimary } = Astro.props
+---
+
+<button 
+    class:list={[
+        "text-lg w-full h-full py-2 rounded-lg hover:opacity-50 transition-opacity", 
+        {
+            "bg-transparent text-cWhite border-[1px] border-cWhite": !isPrimary,
+            "bg-cWhite text-cBlack": isPrimary,
+        }
+    ]}
+    >
+    {label}
+</button>

@@ -1,0 +1,30 @@
+---
+import Link from "../Link.astro"
+---
+
+<article class="h-screen flex items-center w-full px-8 xl:px-12 2xl:px-64">
+    <section class="space-y-6 w-full text-center pt-20 xl:pt-0 xl:w-1/2 xl:text-left">
+        <h2
+            class="font-bold leading-1 text-4xl xl:text-5xl xl:leading-snug"
+        >
+            Mantén el control de tus tareas  
+            con nuestra poderosa aplicación
+            EduTask
+        </h2>
+        <p class="text-cGrey w-full xl:w-3/4">
+            Gestiona tus tareas diarias de manera eficiente, establece recordatorios y realiza un
+            seguimiento de tu progreso. Nuestra interfaz intuitiva hace que la productividad 
+            sea pan comido.
+        </p>
+        <div class="grid grid-cols-2 gap-2 w-auto xl:w-1/2">
+            <Link href="#launch" label="Unete a la lista!" isPrimary={true}/>
+            <Link href="/" label="Contribuye" isPrimary={false}/>
+        </div>
+    </section>
+    <section class="w-1/2 justify-center hidden xl:flex">
+        <img
+            class="mx-auto object-cover object-center xl:w-auto xl:h-[70vh] 2xl:w-auto 2xl:h-auto" 
+            src="./hero.webp" alt="hero image"
+        >
+    </section>
+</article>

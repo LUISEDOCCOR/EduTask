@@ -24,8 +24,9 @@ const features = [
 	},
 ]
 ---
-<section id="features" class="min-h-[50vh] flex flex-col items-center gap-16">
-    <article class="flex justify-center items-center flex-col gap-4">
+<section id="features" class="flex flex-col items-center gap-4 min-h-[50vh] 
+    md:gap-8 xl:gap-16">
+    <article class="flex justify-center items-center flex-col gap-4 px-12 text-center xl:text-left xl:px-0">
         <h5 class="text-sm">Características Clave</h5>
         <h3 class="text-4xl font-bold">Optimiza tu productividad</h3>
         <p 
@@ -37,17 +38,17 @@ const features = [
         </p>
     </article>
     <article class="flex justify-center items-center gap-12 w-[50vw]">
-        <section>
+        <section class="hidden xl:block">
             <img 
                 src="./calendar.svg" 
                 alt="image key features"
                 class="w-96 h-auto"
             >
         </section>
-        <section class="w-1/3 space-y-5">
+        <section class="space-y-5 w-full xl:w-1/3">
             {
                 features.map(({label, content}) => (
-                    <div class="space-y-1">
+                    <div class="space-y-1 text-center md:text-left">
                         <h5 class="text-lg font-semibold">{label}</h5>
                         <p class="text-sm">{content}</p>
                     </div>

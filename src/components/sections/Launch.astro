@@ -1,5 +1,5 @@
 ---
-import Button from "../Button.astro"
+import { LaunchForm } from "./LaunchForm";
 ---
 <section id="launch" class="min-h-[50vh] flex justify-center flex-col items-center gap-4 
 text-center px-12 mt-24 md:mt-0 xl:text-left xl:px-0">
@@ -9,17 +9,7 @@ text-center px-12 mt-24 md:mt-0 xl:text-left xl:px-0">
         Optimiza tus tareas diarias y aumenta tu productividad 
         con nuestra aplicación de tareas intuitiva y llena de funciones.
     </p>
-    <form method="POST" action="https://formspree.io/f/xwkgdlen" class="flex justify-center gap-2 w-full xl:w-auto">
-        <input 
-            aria-label="Email" 
-            placeholder="Correo" 
-            class="w-96 bg-cBlack border-[1px] px-2 border-cWhite rounded-lg outline-none" 
-            type="email"
-            required
-            name="email"
-        >
-        <div class="w-36"><Button label='Unirme' isPrimary={true}/></div>
-    </form>
+   
     <h5 class="text-sm">Suscríbete para recibir una notificación cuando lancemos.</h5>
-
+    <LaunchForm client:visible/>
 </section>

@@ -1,6 +1,6 @@
 import { Button } from "../common/Button.jsx"
 import toast, { Toaster } from 'react-hot-toast';
-
+import { Input } from "../form/Input.jsx";
 export const LaunchForm = () => {
 
     const handleSubmit = async (e) => {
@@ -32,13 +32,14 @@ export const LaunchForm = () => {
             onSubmit={handleSubmit} 
             className="flex justify-center gap-2 w-full xl:w-auto"
         >
-            <input 
-                aria-label="Email" 
-                placeholder="Correo" 
-                className="w-96 bg-cBlack border-[1px] px-2 border-cWhite rounded-lg outline-none" 
-                type="email"
-                name="email"
-            />
+            <div className="w-96">
+                <Input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Ingresa tu correo" 
+                        id="name"
+                />
+            </div>
             <div className="w-36">
                 <Button label='Unirme' isPrimary={true}/>
             </div> 

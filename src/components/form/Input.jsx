@@ -6,9 +6,9 @@ export const Input = ({type, placeholder, name, id}) => {
         id={id}
         name={name}
         className="px-6 py-4 bg-cBlack border-[1px] border-cWhite 
-        rounded-lg outline-none w-full max-w-2xl" 
+        rounded-lg outline-none w-full max-w-2xl focus:bg-cBlack autofill:bg-cBlack" 
         aria-label={name}
-        required
+        autoComplete="off"
     />
     )
 }

@@ -14,7 +14,7 @@ export const RegisteredEmails = () =>{
     },[])
 
     return (
-        <h5 class="text-sm">Suscríbete para recibir una notificación cuando lancemos. 
+        <h5 className="text-sm">Suscríbete para recibir una notificación cuando lancemos. 
             {Emails && ` Actualmente hay ${Emails} personas registradas`}    
         </h5>
     )

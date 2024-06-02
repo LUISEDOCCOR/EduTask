@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks"
+import { useState } from "react"
 
 export const Nav = () => {
 
@@ -47,8 +47,9 @@ export const Nav = () => {
 
                 <section className="space-x-12 hidden xl:block">
                     {
-                        links.map(({ href, label }) => (
+                        links.map(({ href, label }, index) => (
                             <a
+                                key={index}
                                 className="text-lg font-light xl:hover:opacity-70 transition-opacity"
                                 href={href}
                             >{label}
@@ -85,8 +86,9 @@ export const Nav = () => {
             <section id="mobile-nav" className={`h-screen w-screen pt-40 px-12 flex-col gap-8
             bg-black/50 backdrop-blur-lg absolute bottom-0 xl:hidden delay-200 ${isCliked ? "flex slide-down" : "hidden"}`}>
                 {
-                    links.map(({ href, label }) => (
+                    links.map(({ href, label}, index) => (
                         <a
+                            key={index}
                             className="item-nav-mobile text-2xl xl:hover:opacity-70 transition-opacity"
                             href={href}
                         >{label}

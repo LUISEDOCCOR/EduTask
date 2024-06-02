@@ -1,5 +1,6 @@
 ---
 import { LaunchForm } from "./LaunchForm";
+import { RegisteredEmails } from "./RegisteredEmails"
 ---
 <section id="launch" class="min-h-[50vh] flex justify-center flex-col items-center gap-4 
 text-center px-12 mt-24 md:mt-0 xl:text-left xl:px-0">
@@ -9,7 +10,6 @@ text-center px-12 mt-24 md:mt-0 xl:text-left xl:px-0">
         Optimiza tus tareas diarias y aumenta tu productividad 
         con nuestra aplicación de tareas intuitiva y llena de funciones.
     </p>
-   
-    <h5 class="text-sm">Suscríbete para recibir una notificación cuando lancemos.</h5>
+    <RegisteredEmails client:load/>
     <LaunchForm client:load/>
-</section>
+</section

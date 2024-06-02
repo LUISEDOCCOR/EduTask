@@ -28,3 +28,20 @@ export const POST: APIRoute = async ({request}) => {
     }
     
 }
+export const GET: APIRoute = async  () => {
+    try{
+
+    let { data: launch, error } = await supabase
+    .from('launch')
+    .select('*')
+    
+    if(error) return createErrorResponse()
+    
+    return new Response(JSON.stringify({
+        "registeredEmails": launch?.length
+    }),{status: 200})
+
+    }catch(e){
+        return createErrorResponse()
+    }
+}

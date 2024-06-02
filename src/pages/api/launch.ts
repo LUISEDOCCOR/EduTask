@@ -7,6 +7,15 @@ export const POST: APIRoute = async ({request}) => {
     try{
         const formData = await request.formData()
         const email = formData.get("email")
+
+        if(!email){
+            return createResponse(
+                "error",
+                "Añade un correo",
+                400
+            )
+        }
+
         let { data, error } = await supabase 
         .from("launch")
         .insert(

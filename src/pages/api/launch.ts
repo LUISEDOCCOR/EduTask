@@ -30,7 +30,6 @@ export const POST: APIRoute = async ({request}) => {
 }
 export const GET: APIRoute = async  () => {
     try{
-
     let { data: launch, error } = await supabase
     .from('launch')
     .select('*')

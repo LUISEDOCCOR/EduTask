@@ -38,7 +38,6 @@ export const LaunchForm = () => {
                 className="w-96 bg-cBlack border-[1px] px-2 border-cWhite rounded-lg outline-none" 
                 type="email"
                 name="email"
-                // required
             />
             <div className="w-36">
                 <Button label='Unirme' isPrimary={true}/>

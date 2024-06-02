@@ -11,11 +11,11 @@ export const Nav = () => {
         },
         {
             label: "GitHub",
-            href: "github.com",
+            href: "https://github.com/LUISEDOCCOR/EduTask",
         },
         {
             label: "Contacto",
-            href: "/contact",
+            href: "/blog/contact",
         }
     ]
 

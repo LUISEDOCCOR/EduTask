@@ -1,0 +1,47 @@
+---
+import LayoutBlog from "../../layouts/LayoutBlog.astro";
+import { Input } from "../../components/form/Input"
+import { Button } from "../../components/common/Button";
+---
+<LayoutBlog title="Contacto">
+    <section class="mt-6 w-full">
+        <p class="mt-6 leading-snug text-lg text-cGrey">Ponte en contacto con nosotros para cualquier consulta o 
+        comentario. Te responderemos lo antes posible.
+        </p>
+        <div class="flex w-full justify-center">
+            <form action="https://formspree.io/f/xwkgdlen"  
+            method="POST" class="mt-14 space-y-6 flex flex-col items-center w-full">
+                <div class="flex justify-start w-full max-w-2xl">
+                    <label class="text-xl font-semibold" for="name">Nombre</label>
+                </div>
+                <Input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Ingresa tu nombre" 
+                    id="name"
+                />
+                <div class="flex justify-start w-full max-w-2xl">
+                    <label class="text-xl font-semibold" for="email">Correo</label>
+                </div>
+                <Input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Ingresa tu correo" 
+                    id="email"
+                />
+                <div class="flex justify-start w-full max-w-2xl">
+                    <label class="text-xl font-semibold" for="msg">Mensaje</label>
+                </div>
+                <Input 
+                    type="msg" 
+                    name="msg" 
+                    placeholder="Ingresa tu mensaje" 
+                    id="msg"
+                />
+                <div class="flex justify-start w-full max-w-2xl mt-2">
+                    <Button label="Enviar" isPrimary={true}/>
+                </div>
+            </form>
+        </div>
+    </section>
+</LayoutBlog>
